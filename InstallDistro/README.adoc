@@ -9,8 +9,9 @@ Bibliografia : https://wiki.archlinux.org/title/installation_guide
   recomendado , tambien puede usar la del telefono con usb ( compartir red )
 
 * Wifi 
+la station es el nombre de la targeta de wifi 
 
-  root$ cmd iw
+  root$ iwctl --passphrase  "contrasena" station red_wlan0 connect name_wifi
 
 ===  Comprobar el modo de arranque(UEFI/BIOS) :
 		root$ ls /sys/firmware/efi/efivars/
@@ -98,7 +99,7 @@ Configuracion Normal ...
 
 * nessesarios
 
-	root$ pacstrap /mnt   base linux linux-firmware
+	root$ pacstrap /mnt   base base-devel linux linux-firmware
 
 ( nessesarios para el Desktop )
 
@@ -110,6 +111,12 @@ Configuracion Normal ...
 
 	$ pacstrap /mnt networkmanager 
 
+* otros paquetes :
+
+  sudo      -> administrar super usuarios
+  openssh   -> inicio de sesion remoto SSH
+  git       -> controlador de repositorios
+  
 
 ==== Configuracion del sistema :
 
@@ -176,6 +183,13 @@ Configuracion Normal ...
 
 			root$ passwd
 
+==== Configuracion de usuario:
+
+* crear usuario :
+
+  root$ useradd -m -g GrupoUsuario NombreUsuario
+  root$ passwd NombreUsuario
+
 ==== Instalar gestor de arranque( grub ) ;
 	
 * instalar grub :
@@ -189,4 +203,29 @@ Configuracion Normal ...
 
 * dos o mas sistemas :
 
+* Finalizacion base :
+  
+  root$ exit
+  root$ reboot  
+  o 
+  root$ poweroff
 
+==== Post Instalacion
+
+* configurar systemctl
+
+  root$ systemctl start NetworkManager
+  root$ systemctl enable NetworkManager
+  
+  root$ systemctl start sshd
+  root$ systemctl enable sshd
+
+* sudo ( agregar al usuario usuarios )
+
+  root$ chmod +w /etc/sudoers
+  root$ editar /etc/sudoers
+  agregar ::  usuario ALL=(ALL:ALL) ALL
+
+
+
+Instale un Desktop ../InstallDesktop/
