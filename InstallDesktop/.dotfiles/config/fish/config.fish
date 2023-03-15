@@ -94,9 +94,9 @@
 #				[ mensaje izquierdo ]	
 					function fish_prompt
 					  
-					  echo -e (sh $HOME/.dotfiles/Scripits/prompt/left_prompt.sh)
+					  echo -e (sh $HOME/.dotfiles/utils/prompt/left_prompt.sh)
 					end
 #				[ mensaje Derecho ]	
 					function fish_right_prompt -d "Write out the right prompt"
-					  echo -e (sh $HOME/.dotfiles/Scripits/prompt/right_prompt.sh)
+					  echo -e (sh $HOME/.dotfiles/utils/prompt/right_prompt.sh)
 					end
