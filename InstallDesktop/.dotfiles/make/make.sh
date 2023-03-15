@@ -1,6 +1,8 @@
 function main 
 {
-  local theme=$1 ;
-  echo $theme
+
+  echo "Instalando Paquetes"
+  
+  sh $HOME/.dotfiles/make/packages/main.sh
 }
-main $*
+main 
