@@ -1,0 +1,193 @@
+== Instalacion de Arch Linux Base
+
+Author : Josue Ladislao Cocarico Santos
+
+Bibliografia : https://wiki.archlinux.org/title/installation_guide
+
+===  Connectarse a internet 
+* Cable 
+
+  recomendado , tambien puede usar la del telefono con usb ( compartir red )
+
+* Wifi 
+
+  root$ cmd iw
+
+===  Comprobar el modo de arranque(UEFI/BIOS) :
+		root$ ls /sys/firmware/efi/efivars/
+
+=== Modo UEFI
+  
+==== 3) particion del disco  
+  
+para uefi deve ser del tipo GPT si no :
+  
+  root$ change mbr a gpt
+
+UEFI GPT :
+
+    Montaje :       Partición:	Tipo de partición:    Tamaño sugerido:
+    /mnt/boot/efi   /dev/sdX1		EFI system partition  260~512 MiB
+    /mnt            /dev/sdX2		Linux x86-64 root (/) Resto del espacio > 20Gb
+    [SWAP]          /dev/sdX3		Linux swap            Igual a la RAM 
+
+Formatear prticiones :
+
+* Linux /mnt
+
+			root$ mkfs.ext4 /dev/sdXY
+
+*	Particion para UEFI /mnt/boot/efi:
+
+			root$ mkfs.fat -F 32 /dev/sdXY
+
+* swap
+
+			root$ mkswap /dev/sdXY
+
+Montar particiones :
+
+* linux
+
+  root$ mount /dev/sdXY /mnt
+
+* EFI
+
+  root$ mount /dev/sdXY /mnt/boot/efi
+
+* swap
+
+	root$ swapon /dev/sdXY
+
+Configuracion Normal ... 
+
+=== Modo DOS
+
+para DOS deve ser del tipo DOS(MBR) si no :
+  
+  root$ change gpt to mbr
+
+BIOS MBR :
+
+		Montage:     Partición:		Tipo de partición:   Tamaño sugerido:
+		/mnt         /dev/sdX1		Linux               Resto del espacio > 20Gb
+		[SWAP]       /dev/sdX2		Linux swap          Igual a la RAM
+
+Formatear prticiones :
+
+* Linux /mnt
+
+			root$ mkfs.ext4 /dev/sdXY
+
+* swap
+
+			root$ mkswap /dev/sdXY
+
+Montar particiones :
+
+* linux
+
+  root$ mount /dev/sdXY /mnt
+
+* swap
+
+	root$ swapon /dev/sdXY
+
+Configuracion Normal ... 
+
+==== Configuracion del Packetes
+
+* nessesarios
+
+	root$ pacstrap /mnt   base linux linux-firmware
+
+( nessesarios para el Desktop )
+
+* editor de texto plano por consola ( vim , neovim , nano )
+
+	$ pacstrap /mnt neovim
+
+* software para redes ( networkmanager )
+
+	$ pacstrap /mnt networkmanager 
+
+
+==== Configuracion del sistema :
+
+* fstab : archivo de las particiones y montajes
+
+			root$ genfstab -U  /mnt >> /mnt/etc/fstab
+			root$ cat /mnt/etc/fstab
+
+* cambiar al nuevo sistema
+
+			root$ arch-chroot /mnt 
+
+
+==== Idioma del sistema :
+
+* edite  /etc/locale.gen y  descomente el idioma 
+
+						es_MX.UTF-8 UTF-8  
+						es_MX ISO-8859-1 
+			  root$ local-gen
+
+* edite /etc/locale.conf 
+
+					LANGUAGE=es_MX.UTF-8
+					LC_ALL=es_MX.UTF-8
+					LANG=es_MX.UTF-8
+
+* defina la distribucion del teclado en /etc/vconsole.conf
+
+					KEYMAP=es
+
+* entorno grafico o emuladores de consola use
+
+				root$ setxkbmap es
+        root$ loadkeys es
+
+==== Configuracion de Hora :
+* Zona Horaria
+
+			root$ ln -sf /usr/share/zoneinfo/Región/Ciudad /etc/localtime
+
+* sincronizar reloj
+
+			root$ hwclock --systohc
+
+* no recomdado :
+
+  date --set "2022-04-03  13:51"
+  hwclock --set --date=$(date +%D\ \%H:\%M\%S)
+
+==== Configuracion de red :
+* nombre del equipo en /etc/hostname
+
+					nombredelequipo
+
+* ip default /etc/hosts :: cambie si tiene una ip permanente
+
+				127.0.0.1 localhost
+				::1				localhost 
+				127.0.1.1 nombredelequipo.localdomain nombredelequipo
+
+==== Configuracion de Root :
+* contrasena root :
+
+			root$ passwd
+
+==== Instalar gestor de arranque( grub ) ;
+	
+* instalar grub :
+
+  root$ pacmant -S grub os-prober efibootmgr
+
+* Un solo sistema :
+   
+  root$ grub-install --target=x86_64-efi  --afi-directory=/boot/efi/  --bootloader-id=Arch_Linux
+  root$ grub-mkconfig -o /boot/grub/grub.cfg
+
+* dos o mas sistemas :
+
+
