@@ -1,0 +1,10 @@
+/* colors */
+
+* {
+
+	bg 		 		: #00000aa0 ;
+	primari		: #00ff77 ;
+	secondari	: #00aaff;
+	one: #00772250 ;
+	two: #00335550 ;
+}
