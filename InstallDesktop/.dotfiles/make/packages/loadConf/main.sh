@@ -7,7 +7,7 @@ function main
 	for i in ${packages[*]}
 	do
 		echo "Load: "$i
-		local cmd="$HOME/.dotfiles/make/packages/loadConf/$i.sh "
+		local cmd="sh $HOME/.dotfiles/make/packages/loadConf/$i.sh "
 		$cmd
 	done
 }
