@@ -1,0 +1,6 @@
+sub paste {
+     my ($self) = @_;
+     my $content = `/usr/bin/xclip -loops 1 -out ` ;
+     $self->tt_write ($content);
+}
+
