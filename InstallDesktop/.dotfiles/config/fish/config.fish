@@ -29,7 +29,7 @@
 					fish_add_path ~/.local/bin/
 					fish_add_path ~/.deno/bin/
 # 			[ Scripts locaales ]
-					fish_add_path ~/.dotfiles/Scripits/mods/
+					fish_add_path ~/.dotfiles/utils/scripts/
 
 #		╔═══════════════════════════════════════════════╗
 #		║											ALIAS  							  	  ║
