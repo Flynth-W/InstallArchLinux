@@ -5,3 +5,4 @@ function main
   ln -s ./.dotfiles/  ~/
   sh ~./.dotfiles/ $thema 
 }
+main 
