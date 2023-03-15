@@ -1,0 +1,3 @@
+[submodule "InstallDesktop/.dotfiles/config/nvim"]
+	path = InstallDesktop/.dotfiles/config/nvim
+	url = git@github.com:Flynth-W/nvim.git
