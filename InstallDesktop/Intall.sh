@@ -4,6 +4,6 @@ function main
   read theme
   rm ~/.dotfiles 
   ln -s $(pwd)/.dotfiles/  ~/
-  sh ~./.dotfiles/ $thema 
+  sh ~/.dotfiles/make/make.sh   $thema 
 }
 main 
