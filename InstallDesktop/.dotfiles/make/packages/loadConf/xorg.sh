@@ -6,7 +6,7 @@ function main
 	ln -s $HOME/.dotfiles/config/xorg/xinitrc $HOME/.xinitrc
 	
 	rm  $HOME/.dircolors
-	ln -s $HOME/.dotfiles/config/xorg/.dircolors $HOME/.dircolors
+	ln -s $HOME/.dotfiles/config/xorg/dircolors $HOME/.dircolors
 	# install fonts
 	echo " intall fonts"
 	#sudo pacman -S adobe-source-code-pro-fonts ttf-nerd-fonts-symbols --noconfirm
