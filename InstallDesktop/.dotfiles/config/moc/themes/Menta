@@ -1,0 +1,59 @@
+##############################################################################
+#
+# based on solarized
+# best viewed on shaded or black terminal
+# "#ff0fff"
+# red
+# orange
+# yellow
+# green
+# cyan
+# blue
+# magenta
+#
+# black
+# white
+colordef black    = 150 150 250 # "#333333"
+colordef grey     = 500 500 666 # "#aaaaaa"
+colordef cyan     = 300 1000 1000 # "#50ffff"
+colordef blue     = 0 666 1000 # "#00aaff"
+colordef magenta  = 1000 333 1000 # "#aa00aa"
+colordef green    = 0   50 100 # "#"
+colordef red      = 0   600 600   # "#"
+##############################################################################
+
+background           = default  default
+frame                = blue     default
+window_title         = cyan     green
+directory            = cyan     default
+selected_directory   = blue     green
+playlist             = blue     default
+selected_playlist    = blue     default
+file                 = red    default
+selected_file        = cyan     green
+marked_file          = blue     green 
+marked_selected_file = magenta  green 
+info                 = blue     default
+selected_info        = cyan     default
+marked_info          = blue     green
+marked_selected_info = cyan     default 
+status               = white    default
+title                = cyan     default
+state                = green    default
+current_time         = cyan    default
+time_left            = blue     default
+total_time           = cyan     default
+time_total_frames    = white    default
+sound_parameters     = cyan     default
+legend               = blue     default
+disabled             = blue     default
+enabled              = cyan    default
+empty_mixer_bar      = grey     default
+filled_mixer_bar     = cyan     green
+empty_time_bar       = black    default
+filled_time_bar      = red      green
+entry                = yellow   default
+entry_title          = red      default
+error                = red      default
+message              = cyan     default
+plist_time           = cyan     default
