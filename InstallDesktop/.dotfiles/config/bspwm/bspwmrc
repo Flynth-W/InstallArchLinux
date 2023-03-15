@@ -1,0 +1,103 @@
+#! /bin/sh
+
+#╔═══════════════════════════════════════════════╗
+#║											BSPWM										 ║
+#╚═══════════════════════════════════════════════╝
+#┌───────────────────────────────────────────────┐
+#│  es un administrador de ventanas de mosaico	 │
+#│  que representa las ventanas como las hojas	 │
+#│  de un árbol binario completo.								 │
+#└───────────────────────────────────────────────┘
+#┌───────────────────────────────────────────────┐
+#│  use la sequencia fibonaci para las ventanas	 │
+#└───────────────────────────────────────────────┘
+#┌───────────────────────────────────────────────┐
+#│  es controlado y congigurado por BSPC				 │
+#└───────────────────────────────────────────────┘
+# leer mas ...
+# $ help bspwm
+
+#		╔═══════════════════════════════════════════════╗
+#		║							 		SERVICIOS											║
+#		╚═══════════════════════════════════════════════╝
+#				[ Detener servicios ]
+					killall picom
+					killall sxhkd
+#          lxappearance 
+#          killall lxappearance
+# 			[ Iniciar servicios ]
+#					*led del teclado
+#						xset led 3
+#					* atajos del teclado 
+						sxhkd &
+#					* transparencia 
+						picom &
+#					* fondo de pantalla 
+						nitrogen --restore &
+#            sh $HOME/.dotfiles/Scripits/utils/Wallpapers.sh &
+#					* barra de estado
+						sh $HOME/.config/polybar/launcher.sh  
+#		╔═══════════════════════════════════════════════╗
+#		║							 			GENERAL											║
+#		╚═══════════════════════════════════════════════╝
+#				[ numero de monitores (I II III IV V VI ... , 1 2 3 4 5 ...) ]
+					bspc monitor -d  1 2 3  4 5 6 7 8 9 10  11  12  13  14
+# 			[	espacion entre las ventanas ]
+					bspc config window_gap          1
+# 			[ Pre-seleccion ]
+					bspc config presel_feedback       true
+					bspc config presel_feedback_color   "#003377"   
+# 			[ tamaño al dividirse la ventana  ]
+					bspc config split_ratio          0.5
+# 			[ cambiar la posicion con el mouse ]
+					bspc config borderless_monocle   true	
+
+#		╔═══════════════════════════════════════════════╗
+#		║							 			BORDES											║
+#		╚═══════════════════════════════════════════════╝
+# 			[ Tamaño del borde ]
+					bspc config border_width        0
+#				[ Color ]
+#					*	ventana enfocada
+						bspc config focused_border_color    "#007733" 
+#					* ventana no enfocada
+						bspc config normal_border_color     "#000a00"
+#					* monitor no enfocado / ventana enfocada
+						bspc config active_border_color     "#ff0000"
+
+#		╔═══════════════════════════════════════════════╗
+#		║			Espacio entre el monitor y las ventanas		║
+#		╚═══════════════════════════════════════════════╝
+					bspc config top_padding     15
+					bspc config bottom_padding  0
+					bspc config left_padding    0
+					bspc config right_padding   0
+
+#		╔═══════════════════════════════════════════════╗
+#		║										PROGRAMAS										║
+#		╚═══════════════════════════════════════════════╝
+#		┌───────────────────────────────────────────────┐
+#		│  estado:																			│
+#		│			state= floating ,tilet,fullscreen 	 			│
+#		│  enficado: 																		│
+#		│			focus= on , off														│
+#		│  escritorio:																	│
+#		│  		desktop="^2"															│
+#		└───────────────────────────────────────────────┘
+#		┌───────────────────────────────────────────────┐
+#		│  como se llama el programa ?									│
+#		│  use:																					│
+#		│  		$ xprop WM_CLASS													│
+#		│  		seleccione con el raton el programa				│
+#		└───────────────────────────────────────────────┘
+				bspc rule -a mplayer2 state=floating
+				bspc rule -a Zathura 	state=tiled
+				bspc rule -a qutebrowser 	state=tiled
+				bspc rule -a Pcmanfm 	state=floating 
+				bspc rule -a ProWin 	state=floating 
+				bspc rule -a GLFW-Application	state=floating 
+
+                bspc config pointer_modifier mod4
+                bspc config pointer_action1 move
+                bspc config pointer_action2 resize_side
+                bspc config pointer_action2 resize_corner

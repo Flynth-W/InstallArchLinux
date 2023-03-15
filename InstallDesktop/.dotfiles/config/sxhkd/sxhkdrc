@@ -1,0 +1,154 @@
+#╔═══════════════════════════════════════════════╗
+#║				SXHKD							 ║
+#╚═══════════════════════════════════════════════╝
+#┌───────────────────────────────────────────────┐
+#│   	atajos de teclado						 │
+#└───────────────────────────────────────────────┘
+#┌───────────────────────────────────────────────┐
+#│ use: xev para ver el nombre le las teclas	 │
+#└───────────────────────────────────────────────┘
+# Tools :
+#   * translator
+super +  alt + t 
+     Translator.sh
+
+button9
+  amixer sset Master 3%+,3%+
+button8
+  amixer sset Master 3%-,3%-
+#asdaddddddddddddd
+    
+#╔═══════════════════════════════════════════════╗
+#║										SISTEM										 ║
+#╚═══════════════════════════════════════════════╝
+#┌───────────────────────────────────────────────┐
+#│		keys[super + alt + shift + ctrl + ... ]  	 │
+#└───────────────────────────────────────────────┘
+#			[ quit/restart bspwm ]
+super + alt + shift + ctrl + {q,r}
+			bspc {quit,wm -r}
+
+#			[ bloquear la pantalla ]
+super + alt + shift + ctrl + Escape
+        slimlock
+
+#╔═══════════════════════════════════════════════╗
+#║										MOCP 											 ║
+#╚═══════════════════════════════════════════════╝
+#┌───────────────────────────────────────────────┐
+#│				keys[super + alt + ctrl + ... ]  	 		 │
+#└───────────────────────────────────────────────┘
+#		[ siguiente ]
+super + alt + ctrl + n
+    mocp -f
+#		[ anterior ]
+super + alt + ctrl + b
+    mocp -r
+#		[ puse ]
+super + alt + ctrl + space
+    mocp -G
+#╔═══════════════════════════════════════════════╗
+#║										AMIXSER										 ║
+#╚═══════════════════════════════════════════════╝
+#┌───────────────────────────────────────────────┐
+#│	controlador de la salida y entrada de audio	 │
+#└───────────────────────────────────────────────┘
+#		[ volumen - ]
+super + minus
+  amixer sset Master 3%-,3%-
+#		[ volumen muted ]
+super + plus
+    Muted.sh  
+#		[ volumen + ]
+super + equal
+  amixer sset Master 3%+,3%+
+#╔═══════════════════════════════════════════════╗
+#║									ESCRITORIOS									 ║
+#╚═══════════════════════════════════════════════╝
+
+# 	[ ir al anterior escritorio ]
+super + Tab
+	bspc desktop -f last
+#  	[ escritorios del 1-0 ]
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#  	[ escritorios del F1-F4 ]
+super + {_,shift + } F{1-4}
+    bspc {desktop -f,node -d}  ^$(math 10 + '{1-4}' )
+#╔═══════════════════════════════════════════════╗
+#║									VENTANAS										 ║
+#╚═══════════════════════════════════════════════╝
+#				[ elliminar una ventana windown ]
+super + Escape
+	bspc node -c
+#       [ cambiar de ventana al siquiente ]
+#super + bracket{left,right}
+super  + {_,shift } + grave
+    sh  BspwmNextPrev.sh {prev,next}
+# 			[ cambiar/mover de ventana  ]
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+#       [ estado ( mosaico , flotante , fullscreen ) ]
+super + { shift + z , ctrl + z , alt + z}
+	bspc node -t {tiled,floating,fullscreen}
+#       [ stick : se mueve a cualquier escritorio ]
+#       [ private : no se puede dividir ]
+super + { shift + F12 , ctrl + F12 }
+    bspc node -g { sticky , private }
+#       [ below: atras de todos ]
+#       [ normal: en medio ]
+#       [ above : sobre todos ]
+super + { shift + F11 , ctrl + F11 ,alt + F11}
+    bspc node -l {below,normal,above}
+
+#╔═══════════════════════════════════════════════╗
+#║									PROGRAMAS										 ║
+#╚═══════════════════════════════════════════════╝
+# open NeoVim
+super + v
+  urxvt -e nvim
+
+#		[ abrir terminal:urxvt ]
+super + t
+     TerminalFloat.sh
+super + Return
+    urxvt 
+#		[ abrir lansador de aplicaciones: rofy  ]
+super + space
+    ~/.config/rofi/src/launcher.sh	
+#		[ screenshot ]
+super + Print
+		screenshot.sh all 
+super + shift + Print
+		 screenshot.sh select
+#╔═══════════════════════════════════════════════╗
+#║									MOVER VENTANA 							 ║
+#╚═══════════════════════════════════════════════╝
+# execute key: mouse
+# super + click-right  
+
+#╔═══════════════════════════════════════════════╗
+#║					CAMBIAR TAMANO VENTANA 							 ║
+#╚═══════════════════════════════════════════════╝
+# execute key: mouse
+# super + click-left
+
+#╔═══════════════════════════════════════════════╗
+#║						PRE-SELECCIONAR			 							 ║
+#╚═══════════════════════════════════════════════╝
+# 		[ direcction  ]
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
+
+# 		[ tamano ]
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+
+# 		[ cancelar la pre-seleccion ]
+super + ctrl + Escape
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
