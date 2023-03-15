@@ -1,6 +1,5 @@
 == Instalacion de Arch Linux Base
 
-Author : Josue Ladislao Cocarico Santos
 
 Bibliografia : https://wiki.archlinux.org/title/installation_guide
 
