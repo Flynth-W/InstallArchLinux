@@ -1,0 +1,18 @@
+NAME
+		DownloadYT
+SYNOPSIS
+		DownloadYT [OPTIONS] "URL"
+
+OPTIONS
+	[ PATH ]
+		default:~/home/multimedia
+		-P:
+				DownloadYT -P ~/path_/ "url"
+		-p: usa el directorio actual
+				DownloadYT -p "url"
+	[ formato ]
+		default:sonido y video
+		-s:	solo el sonido
+				DownloadYT -s "url"
+		-v:	solo el sonido
+				DownloadYT -s "url"

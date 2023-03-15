@@ -1,0 +1,7 @@
+[ Requerimientos ]
+  + crear o definir una ruta de archivos para todas las descargas
+  + cambiar el directorio definido por una vez para las descargas
+  + formato audio
+  + formato video
+  + descargar ambos
+  
