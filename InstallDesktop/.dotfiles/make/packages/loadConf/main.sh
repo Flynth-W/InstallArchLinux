@@ -1,6 +1,7 @@
 
 function main 
 {
+  mkdir $HOME/.config
   echo " chargin files ..." 
   local list="$HOME/.dotfiles/make/packages/packages.json "
 	local	packages=($(cat $list | jshon -k))
