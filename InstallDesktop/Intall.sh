@@ -2,7 +2,7 @@ function main
 {
   echo -e "escoja un thema \n Orange \n CyanDark"
   read theme
-  rm $(pwd)/.dotfiles 
+  rm ~/.dotfiles 
   ln -s $(pwd)/.dotfiles/  ~/
   sh ~./.dotfiles/ $thema 
 }
