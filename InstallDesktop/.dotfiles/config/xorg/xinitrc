@@ -1,0 +1,12 @@
+# cambia el mouse de ( x ) a ( un estado normal )
+xsetroot -cursor_name left_ptr   
+
+# carga el thema de la terminal
+xrdb  -merge ~/.Xresources 
+
+# elimina la papelera 
+sh $HOME/.dotfiles/Scripits/mods/CleanPaperBin.sh delete 
+
+
+# manejador de ventans 
+bspwm

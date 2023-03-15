@@ -1,0 +1,90 @@
+!╔═══════════════════════════════════════════════╗																	
+!║				CONFIGURACION TERMINAL [ URXVT ]			 ║
+!╚═══════════════════════════════════════════════╝
+!		╔═══════════════════════════════════════════════╗	
+!		║  									GENERAL										  ║	
+!		╚═══════════════════════════════════════════════╝
+!          Xcursor.theme: KanadaCursors
+!					URxvt.saveLines:10000
+					URxvt.internalBorder:  0
+!		╔═══════════════════════════════════════════════╗	
+!		║  			ESPACIO ENTRE LAS LETRAS							  ║	
+!		╚═══════════════════════════════════════════════╝
+					URxvt.letterSpace: 0
+!		╔═══════════════════════════════════════════════╗	
+!		║  			FUNTES DE LAS LETRAS Y SIMBOLOS				  ║	
+!		╚═══════════════════════════════════════════════╝
+
+                    URxvt.font:xft:Source Code Pro:style=Light:pixelsize=12, xft: Hack Nerd Font Mono:pixelsize=12:antialias=true
+!                    URxvt.font:xft:monospace:style=Regular:pixelsize=14, xft: Hack Nerd Font Mono:pixelsize=13:antialias=true
+!URxvt.font: xft: Lekton Nerd Font Mono:style=Regular:pixelsize=15:antialias=true
+!					URxvt.font:xft:JetBrains Mono:style=ExtraLight:pixelsize=12, xft: Hack Nerd Font Mono:pixelsize=12:antialias=true
+!					URxvt.font:xft:JetBrains Mono:style=ExtraLight:pixelsize=13 :antialias=true
+!		╔═══════════════════════════════════════════════╗	
+!		║	 		TAMANO DE LA TERMINAL EN MODO FLOTANTE		║
+!		╚═══════════════════════════════════════════════╝
+!					URxvt*geometry:80x40+0+0
+!		╔═══════════════════════════════════════════════╗	
+!		║	 									SCROLLBAR					 					║
+!		╚═══════════════════════════════════════════════╝
+!					[ activar o desactiar la barra ]
+					URxvt.scrollBar:false
+!					[ color de la barra ]
+					URxvt.scrollColor:#007733
+!					[ derecha o izquierda ]
+					URxvt.scrollBar_right: true
+!					[ tamano ]
+					URxvt.thickness: 0
+!					[ stilo (rxvt,plain ,next ,xterm ) ]
+					URxvt.scrollstyle: plain
+!		╔═══════════════════════════════════════════════╗	
+!		║	 								TRANSPARENCIA					 				║
+!		╚═══════════════════════════════════════════════╝
+!					[ activar o desactivar total ]
+					URxvt.transparent:false
+!					[	[porcentage de la transparencia]#color ]
+					URxvt.background:[90]#00000a
+!					[	BUG: no funciona sin esto ??? ] 
+					URxvt.depth: 32
+
+! 		[ COLORS ]
+! 				[ salida de la terminal ]
+urxvt.foreground:#ffaa00
+!					[  █ <- color ]
+URxvt.cursorColor:#0077aa
+! black
+URxvt.color0:#000000
+URxvt.color8:#333333
+! red
+URxvt.color1:[50]#aa00ff
+URxvt.color9:#ff2344
+! green
+URxvt.color2:#00ff00
+URxvt.color10:#00ff44
+! yellow
+URxvt.color3:#ffff00
+URxvt.color11:#ff00ff
+! blue
+URxvt.color4  :[85]#000a00
+URxvt.color12 :#4444ff
+! magenta
+URxvt.color5  :[10]#af0343
+URxvt.color13 :#af00ff
+! cyan
+URxvt.color6  : #00ffff
+URxvt.color14 : #55ffff
+! white
+URxvt.color7  :[50]#00ffaa
+URxvt.color15 :#aaaaaa
+
+
+URxvt*iso14755:                false 
+URxvt*iso14755_52:             false 
+
+
+URxvt.perl-ext-common:eval,new-window
+! atajos
+URxvt.keysym.Shift-Control-V:eval:paste_clipboard 
+URxvt.keysym.Shift-Control-C:eval:selection_to_clipboard
+!perl not path lib
+URxvt.keysym.Control-Return:perl:new-window 
