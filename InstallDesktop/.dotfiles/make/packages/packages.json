@@ -1,0 +1,32 @@
+{
+	"fish":"shell avanzado",
+	"lxappearance":"gnome theme cofig",
+	"picom":"compocicion de transparencia" ,
+	"sxhkd":"atajos de teclado" ,
+	"nitrogen":" fondo de pantalla" ,
+	"polybar":"barra de estado" ,
+	"rofi":"panel de aplicaciones" ,
+	"slim":"interfaz de inicio de secion" ,
+	"rxvt-unicode":" terminal" ,
+	"rxvt-unicode-terminfo":"terminal" ,
+	"xorg":"sistema de ventanas x" ,
+	"bspwm":"gestor de ventanas fibinacci",
+  "papirus-icon-theme ":"iconos de rofy",
+  "xclip":"copiar y pegar " ,
+
+  "zathura":"visor de pdf " ,
+	"pcmanfm":"manejador de archivos" ,
+	"lsd":"ls con estecica" ,
+	"bat":"cat con estetica" ,
+	"neovim":"editor de codigo robusto " ,
+	"yt-dlp":"Descarga archivos de la red " ,
+	"scrot":" captura pantalla" ,
+	"neofetch":" info de la maquina" ,
+
+  "qutebrowser":" navegador web",
+	"moc":"musica en consola",
+	"translate-shell":"traductor con api de google",
+	"feh":"visor de imagenes"
+
+}
+
