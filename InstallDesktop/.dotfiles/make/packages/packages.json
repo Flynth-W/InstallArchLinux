@@ -15,9 +15,10 @@
   "xclip":"copiar y pegar " ,
   "npm":"manjador de paketes node" ,
   "xorg-xinit":" innicia el x windown" ,
-
+  
   "zathura":"visor de pdf " ,
-	"pcmanfm":"manejador de archivos" ,
+	"zathura-pdf-mupdf":"plugin para .pdf" ,
+  "pcmanfm":"manejador de archivos" ,
 	"lsd":"ls con estecica" ,
 	"bat":"cat con estetica" ,
 	"neovim":"editor de codigo robusto " ,
