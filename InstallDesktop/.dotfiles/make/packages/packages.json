@@ -29,7 +29,9 @@
   "qutebrowser":" navegador web",
 	"moc":"musica en consola",
 	"translate-shell":"traductor con api de google",
-	"feh":"visor de imagenes"
-
+	"feh":"visor de imagenes",
+  
+  "alsa-utils":" utils to song" ,
+  "pulseaudio-alsa":"soun server"
 }
 
