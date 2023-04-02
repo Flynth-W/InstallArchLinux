@@ -1,1 +1,1 @@
-== Instalacion de Escritorio para Arch Linux
+== Desktop Installation for Arch Linux
