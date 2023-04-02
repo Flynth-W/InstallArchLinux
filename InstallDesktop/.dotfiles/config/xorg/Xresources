@@ -43,7 +43,7 @@
 !					[ activar o desactivar total ]
 					URxvt.transparent:false
 !					[	[porcentage de la transparencia]#color ]
-					URxvt.background:[90]#00000a
+					URxvt.background:[90]#000005
 !					[	BUG: no funciona sin esto ??? ] 
 					URxvt.depth: 32
 
