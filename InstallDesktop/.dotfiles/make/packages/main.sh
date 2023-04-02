@@ -23,6 +23,7 @@ function View
 
 function main
 {
+  mkdir $HOME/.config
   List=$HOME/.dotfiles/make/packages/packages.json
   echo $List
   View
