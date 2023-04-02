@@ -2,16 +2,17 @@
 # by Kamila Souckova <kamila@vesmir.sk>
 
 # Messages (e.g. shutdown)
-msg_color               #aaaaaa
+msg_color               #ff0a0a
 msg_font                monospace:italic:size=18:dpi=75
 msg_x                   13%
 msg_y                   78%
 msg_shadow_color #ff0000
 msg_shadow_xoffset 0
-msg_shadow_yoffset 1
+msg_shadow_yoffset 0
 
 
 # valid values: stretch, tile, center
+          
 background_style        stretch
 background_color        #ffff00
 
@@ -23,17 +24,17 @@ input_name_y            14
 #input_pass_x            218
 #input_pass_y            14
 input_font              monospace:size=18:italic:dpi=75
-input_color             #aaaaaa
+input_color             #ff0a0a
 input_shadow_color #ff0000
 input_shadow_xoffset 0
-input_shadow_yoffset 1
+input_shadow_yoffset 0
 
 # Username / password request
 username_font           monospace:size=18:italic:dpi=75
-username_color          #aaaaaa
+username_color          #ff0a0a
 username_shadow_color #ff0000
 username_shadow_xoffset 0
-username_shadow_yoffset 1
+username_shadow_yoffset 0
 username_x              1
 username_y              14
 password_x              1
