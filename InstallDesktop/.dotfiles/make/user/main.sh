@@ -23,7 +23,7 @@ function View
 
 function main
 {
-  local List=$HOME/.dotfiles/make/packages/user/packages.json
+  local List=$HOME/.dotfiles/make/user/packages.json
   local option=$1
   if [[  "$option" != "Install"   ]]
   then
@@ -38,7 +38,7 @@ function main
       ;;
       2 | Install)
           Installer
-          sh $HOME/.dotfiles/make/packages/user/loadConf/main.sh
+          sh $HOME/.dotfiles/make/user/loadConf/main.sh
       ;;
       *)
           echo "undefine return"
