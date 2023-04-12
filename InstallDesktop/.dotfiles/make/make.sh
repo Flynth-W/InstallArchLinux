@@ -14,14 +14,14 @@ function main
   read -p ' ' option 
   case $option in
     System)
-      sh $HOME/.dotfiles/make/packages/system/main.sh
+      sh $HOME/.dotfiles/make/system/main.sh
     ;;
     User)
-      sh $HOME/.dotfiles/make/packages/user/main.sh
+      sh $HOME/.dotfiles/make/user/main.sh
     ;;
     All)
-      sh $HOME/.dotfiles/make/packages/system/main.sh  Install
-      sh $HOME/.dotfiles/make/packages/user/main.sh    Install
+      sh $HOME/.dotfiles/make/system/main.sh  Install
+      sh $HOME/.dotfiles/make/user/main.sh    Install
     ;;
     *)
         echo "undefine return"
