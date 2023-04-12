@@ -1,0 +1,8 @@
+{
+	"slim":"interfaz de inicio de secion" ,
+	"xorg":"sistema de ventanas x" ,
+  "xorg-xinit":" innicia el x windown" ,
+  "alsa-utils":" utils to song" ,
+  "pulseaudio-alsa":"soun server"
+}
+

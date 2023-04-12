@@ -6,15 +6,12 @@
 	"nitrogen":" fondo de pantalla" ,
 	"polybar":"barra de estado" ,
 	"rofi":"panel de aplicaciones" ,
-	"slim":"interfaz de inicio de secion" ,
 	"rxvt-unicode":" terminal" ,
 	"rxvt-unicode-terminfo":"terminal" ,
-	"xorg":"sistema de ventanas x" ,
 	"bspwm":"gestor de ventanas fibinacci",
-  "papirus-icon-theme ":"iconos de rofy",
+  "papirus-icon-theme":"iconos de rofy",
   "xclip":"copiar y pegar " ,
   "npm":"manjador de paketes node" ,
-  "xorg-xinit":" innicia el x windown" ,
   
   "zathura":"visor de pdf " ,
 	"zathura-pdf-mupdf":"plugin para .pdf" ,
@@ -29,9 +26,6 @@
   "qutebrowser":" navegador web",
 	"moc":"musica en consola",
 	"translate-shell":"traductor con api de google",
-	"feh":"visor de imagenes",
-  
-  "alsa-utils":" utils to song" ,
-  "pulseaudio-alsa":"soun server"
+	"feh":"visor de imagenes"
 }
 

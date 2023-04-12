@@ -1,3 +1,5 @@
+
+
 function Installer
 {
 	local packages=($(cat $List | jshon -k))
@@ -23,13 +25,26 @@ function View
 
 function main
 {
-  mkdir $HOME/.config
-  List=$HOME/.dotfiles/make/packages/packages.json
-  echo $List
-  View
-	Installer
-  
-  sh $HOME/.dotfiles/make/packages/loadConf/main.sh
-}
+  local List=$HOME/.dotfiles/make/packages/user/packages.json
+  local option=$1
+  if [[  "$option" != "Install"   ]]
+  then
+    local messageOption="1)View\n2)Install\n"
+    echo -e $messageOption
+    read -p ':: ' option 
+  fi 
 
+  case $option in
+      1 | View)
+          View
+      ;;
+      2 | Install)
+          Installer
+          sh $HOME/.dotfiles/make/packages/user/loadConf/main.sh
+      ;;
+      *)
+          echo "undefine return"
+      ;;
+  esac
+}
 main $*
