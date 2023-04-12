@@ -11,7 +11,8 @@ function main
   echo "Instalando Paquetes"
   
   local messageOption="1)System\n2)User\n3)All\n"
-  read -p ' ' option 
+  echo -e $messageOption 
+  read -p ':: ' option 
   case $option in
     System)
       sh $HOME/.dotfiles/make/system/main.sh
