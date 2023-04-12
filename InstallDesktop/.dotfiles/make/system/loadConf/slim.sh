@@ -1,8 +1,6 @@
 function main
 {
 	# system config
-	#local theme="$HOME/.dotfiles/Themes/Menta"
-	local theme=$1
 	
 	sudo rm /etc/slim.conf
 	
