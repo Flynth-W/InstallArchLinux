@@ -14,13 +14,13 @@ function main
   echo -e $messageOption 
   read -p ':: ' option 
   case $option in
-    System)
+    1 | System)
       sh $HOME/.dotfiles/make/system/main.sh
     ;;
-    User)
+    2 |User)
       sh $HOME/.dotfiles/make/user/main.sh
     ;;
-    All)
+    3 |All)
       sh $HOME/.dotfiles/make/system/main.sh  Install
       sh $HOME/.dotfiles/make/user/main.sh    Install
     ;;
