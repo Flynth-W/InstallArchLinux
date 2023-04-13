@@ -1,5 +1,10 @@
 {
-	"fish":"shell avanzado",
+
+	"mc":" Shell visual para sistemas tipo Unix",
+	"code":"editor de codigo",
+	"chromium":"navegador web",
+	
+  "fish":"shell avanzado",
 	"lxappearance":"gnome theme cofig",
 	"picom":"compocicion de transparencia" ,
 	"sxhkd":"atajos de teclado" ,
@@ -23,7 +28,6 @@
 	"scrot":" captura pantalla" ,
 	"neofetch":" info de la maquina" ,
 
-  "qutebrowser":" navegador web",
 	"moc":"musica en consola",
 	"translate-shell":"traductor con api de google",
 	"feh":"visor de imagenes"
