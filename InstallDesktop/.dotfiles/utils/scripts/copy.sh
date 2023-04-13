@@ -7,11 +7,18 @@
 
 function main
 {
-  
   local tmpPath="/tmp/file_path"
-  local path=$(pwd)
-  local path=$( echo $path/$1 ) ;
-  echo $path >| $tmpPath  
+  #clean file
+  true >| $tmpPath  
+
+  local argPath=""
+  for iterator in  $*
+  do
+    local path=$(pwd)
+    local path=$( echo $path/$iterator " " ) ;
+    argPath+=$path
+  done
+  echo  $argPath >> $tmpPath  
+
 }
 main $*
-
