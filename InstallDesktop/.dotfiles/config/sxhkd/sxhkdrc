@@ -82,6 +82,11 @@ super + {_,shift + } F{1-4}
 #				[ elliminar una ventana windown ]
 super + Escape
 	bspc node -c
+#cambiar formato
+super + f
+  bspc node @parent -R 90
+super + shift + f
+  bspc node @parent -R -90
 #       [ cambiar de ventana al siquiente ]
 #super + bracket{left,right}
 super  + {_,shift } + grave
