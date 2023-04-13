@@ -18,9 +18,15 @@
   
   crea e implementa barras de estado
 
-* rofy 
-  
-  conmutador de ventana, dialogo de ejecucion de programas
+=== Programas : 
+
+  rofy :  conmutador de ventana, dialogo de ejecucion de programas
+  urxvt : terminal
+  pcmanfm : manejador de archivos
+  mc :
+  code : editor de codigo
+  nvim : editor de codigo
+  chromium : navegador web
 
 === Uso del escritorio :
 
