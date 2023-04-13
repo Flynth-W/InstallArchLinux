@@ -1,5 +1,5 @@
 #config idioma del teclado
-setxmap es
+  #setxmap es
 
 # cambia el mouse de ( x ) a ( un estado normal )
 xsetroot -cursor_name left_ptr   
@@ -10,6 +10,8 @@ xrdb  -merge ~/.Xresources
 # elimina la papelera 
 sh $HOME/.dotfiles/Scripits/mods/CleanPaperBin.sh delete 
 
+#barra de stado
+  sh $HOME/.config/polybar/launcher.sh & 
 
 # manejador de ventans 
 bspwm
