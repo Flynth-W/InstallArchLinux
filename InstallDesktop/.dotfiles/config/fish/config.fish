@@ -85,7 +85,8 @@
 					set -U fish_pager_color_description   "#00aaff"
 #				[  numero  de comandos  disponibles ]
 					set -U fish_pager_color_progress      '#ffaa00'
-
+#others
+  set -U fish_color_valid_path -i "#ffaa00" 
 
 
 #		╔═══════════════════════════════════════════════╗
