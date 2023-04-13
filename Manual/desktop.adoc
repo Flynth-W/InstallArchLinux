@@ -1,0 +1,107 @@
+== Manual del Escritorio
+
+=== Caracteristicas del escritorio:
+  
+* xorg
+  
+  servidor de visualizacion X Windown
+
+* bspwm
+
+  gestor de ventanas tipo mosaico 
+
+* sxhkd
+  
+  es un demonio simple de teclas de acceso directo para X Windown
+
+* polybar
+  
+  crea e implementa barras de estado
+
+* rofy 
+  
+  conmutador de ventana, dialogo de ejecucion de programas
+
+=== Uso del escritorio :
+
+* Abrir programas :
+terminal:
+  
+  mosaico:
+    super + Enter
+  floating:
+    super + T
+
+Lanzador de programas (rofi):
+
+  super + space
+
+* Ventanas :
+
+en su mayoria es manipulado por atajos de taclado .
+
+
+tienen 3 modos :
+  
+  tiled       : modo mosaico ( por defecto )
+      super +  shift + z 
+  floating    : modo flotante
+      super +  ctrl + z 
+  fullscreen  : modo pantalla completa
+      super +  alt + z
+
+elimiar ventana:
+  
+  super + Escape
+
+cambiar de ventana :
+
+puede usar el mouse y seleccionar o ...
+
+  mosaico :  cambia segun la direccion de flecha
+    super +  { left, down , up , right }
+  floating and fullscreen:
+    super  + ~
+
+cambiar de lugar :
+
+  mosaico :  cambia segun la direccion de flecha
+    super + shift +  { left, down , up , right }
+
+cambiar formato de mosaico:
+
+  super + f
+
+ajuste de ventana :
+  
+  mosaico,floating:
+  seleccione cerca del vorde de la ventana:
+  super + (mouse  click derecho)
+
+mover ventana
+  
+  mosaico,floating:
+  seleccione cerca del vorde de la ventana:
+  super + (mouse  click izquierdo)
+
+* Escritorios :
+
+cambiar de escritorio:
+
+  super + {numero de escritorio disponible}
+  super + {F1,F2,F3,F4,1,2,3,4,5,6,7,8,9,0}
+
+regresar al escritorio anterior :
+  
+  super + Tab
+
+mover una ventana a otro escritorio
+  
+  tiled,floating,fullscreen :
+  super + shift + {F1,F2,F3,F4,1,2,3,4,5,6,7,8,9,0}
+
+
+
+
+
+
