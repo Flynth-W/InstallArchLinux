@@ -13,8 +13,8 @@ set selection-clipboard "clipboard"
 set statusbar-basename  			  true
 set statusbar-home-tilde 				true
 set statusbar-page-percent 			true
-set statusbar-bg                "#282a36" # Background
-set statusbar-fg                "#f8f8f2" # Foreground
+set statusbar-bg                "#001122" # Background
+set statusbar-fg                "#0077aa" # Foreground
 
 set font " monospace normal 12 "
 
@@ -22,26 +22,26 @@ set notification-error-bg       "#ff5555" # Red
 set notification-error-fg       "#f8f8f2" # Foreground
 set notification-warning-bg     "#ffb86c" # Orange
 set notification-warning-fg     "#44475a" # Selection
-set notification-bg             "#282a36" # Background
-set notification-fg             "#f8f8f2" # Foreground
+set notification-bg             "#001122" # Background
+set notification-fg             "#00a7ca" # Foreground
 
-set completion-bg               "#282a36" # Background
-set completion-fg               "#6272a4" # Comment
+set completion-bg               "#001122" # Background
+set completion-fg               "#00a7ca" # Comment
 set completion-group-bg         "#282a36" # Background
 set completion-group-fg         "#6272a4" # Comment
-set completion-highlight-bg     "#44475a" # Selection
-set completion-highlight-fg     "#f8f8f2" # Foreground
+set completion-highlight-bg     "#007477" # Selection
+set completion-highlight-fg     "#001122" # Foreground
 
 set index-bg                    "#282a36" # Background
 set index-fg                    "#f8f8f2" # Foreground
 set index-active-bg             "#44475a" # Current Line
 set index-active-fg             "#f8f8f2" # Foreground
 
-set inputbar-bg                 "#282a36" # Background
-set inputbar-fg                 "#f8f8f2" # Foreground
+set inputbar-bg                 "#001015" # Background
+set inputbar-fg                 "#00a6a3" # Foreground
 
-set highlight-color             "#aaaaaa" # Orange
-set highlight-active-color      "#ff79c6" # Pink
+set highlight-color             "#000000" # Orange
+set highlight-active-color      "#aaaaaa" # Pink
 
 set default-bg                  "#050505" # Background
 set default-fg                  "#f8f8f2" # Foreground
@@ -54,7 +54,7 @@ set render-loading-bg           "#f8f8f2" # Foreground
 #
 
 set recolor-lightcolor          "#001015" # Background
-set recolor-darkcolor           "#55ff77" # Foreground
+set recolor-darkcolor           "#00a6a3" # Foreground
 
 #
 # Startup options
