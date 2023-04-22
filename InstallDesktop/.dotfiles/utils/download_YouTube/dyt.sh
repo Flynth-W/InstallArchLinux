@@ -20,16 +20,16 @@ function main
     arg=$*
 		if [[ $# -eq 0 ]]
 		then
-			cat $HOME/.dotfiles/Scripits/download_YouTube/doc.txt
+			cat $HOME/.dotfiles/utils/download_YouTube/doc.txt
 			return 0
 		fi
 		
 		if [[ $1 == "-h" ]]
 		then
-			cat $HOME/.dotfiles/Scripits/download_YouTube/doc.txt
+			cat $HOME/.dotfiles/utils/download_YouTube/doc.txt
 			return 0
 		fi
-    local ruta_argumen="$HOME/.dotfiles/Scripits/download_YouTube/tool/arguments.sh"
+    local ruta_argumen="$HOME/.dotfiles/utils/download_YouTube/tool/arguments.sh"
 
     declare -A Arg="$(sh  $ruta_argumen  $* )"
     
@@ -39,16 +39,16 @@ function main
     
     case ${Arg[format]} in
         sound )
-            local sound="$HOME/.dotfiles/Scripits/download_YouTube/tool/sound.sh"
+            local sound="$HOME/.dotfiles/utils/download_YouTube/tool/sound.sh"
             sh $sound ${Arg[url]}   ${Arg[path]}  
             ;;
         video )
-            local video="$HOME/.dotfiles/Scripits/download_YouTube/tool/video.sh"
+            local video="$HOME/.dotfiles/utils/download_YouTube/tool/video.sh"
 
             sh $video ${Arg[url]}   ${Arg[path]}  
             ;;
         * )
-            local sv="$HOME/.dotfiles/Scripits/download_YouTube/tool/sound_video.sh"
+            local sv="$HOME/.dotfiles/utils/download_YouTube/tool/sound_video.sh"
 
             sh $sv ${Arg[url]}   ${Arg[path]}  
             ;;

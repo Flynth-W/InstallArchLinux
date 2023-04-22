@@ -10,8 +10,8 @@ function sonud_video
     else
         path="$path/sv"
     fi
-    local sound="$HOME/.dotfiles/Scripits/download_YouTube/tool/sound.sh"
-    local video="$HOME/.dotfiles/Scripits/download_YouTube/tool/video.sh"
+    local sound="$HOME/.dotfiles/utils/download_YouTube/tool/sound.sh"
+    local video="$HOME/.dotfiles/utils/download_YouTube/tool/video.sh"
 
     sh $sound $url "$path/sound"
     sh $video $url "$path/video"
