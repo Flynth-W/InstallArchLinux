@@ -8,12 +8,10 @@ function main
 
   case $options in
     -d)
-      echo "delete"
       args=("${args[@]/-d}")
       rm -rf ${args[@]}
       ;;
     *)
-      echo "move to ~/.tmp"
       mv $* $path
       ;;
   esac
