@@ -36,6 +36,7 @@
 #		╚═══════════════════════════════════════════════╝
 #				[ perzonalizado ( lsd ) ]
 					alias lsd='lsd --config-file ~/.config/lsd/config.yalm '
+					alias ls='lsd'
 #				[ perzonalizado ( neofetch ) ruta de imagen ,  tamano ]
 					alias neofetch='neofetch --w3m $HOME/.config/neofetch/images/chaisanBlack-removebg-preview.png --image_size 260'
 #				[ limpiar la consola ]
