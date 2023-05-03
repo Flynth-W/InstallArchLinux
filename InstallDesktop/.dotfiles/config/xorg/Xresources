@@ -53,30 +53,29 @@ urxvt.foreground:#ffaa00
 !					[  █ <- color ]
 URxvt.cursorColor:#0077aa
 ! black
-URxvt.color0:#000000
-URxvt.color8:#333333
+URxvt.color0:  #000000
+URxvt.color8:  #686868
 ! red
-URxvt.color1:[50]#aa00ff
-URxvt.color9:#ff2344
-! green
-URxvt.color2:#00ff00
-URxvt.color10:#00ff44
-! yellow
-URxvt.color3:#ffff00
-URxvt.color11:#ff00ff
-! blue
-URxvt.color4  :[85]#000a00
-URxvt.color12 :#4444ff
-! magenta
-URxvt.color5  :[10]#af0343
-URxvt.color13 :#af00ff
-! cyan
-URxvt.color6  : #00ffff
-URxvt.color14 : #55ffff
-! white
-URxvt.color7  :[50]#00ffaa
-URxvt.color15 :#aaaaaa
-
+URxvt.color1:  #B21818
+URxvt.color9:  #FF5454
+! gre.n
+URxvt.color2:  #18B218
+URxvt.color10: #54FF54
+! yel.ow
+URxvt.color3:  #B26818
+URxvt.color11: #FFFF54
+! blu.
+URxvt.color4:  #1818B2
+URxvt.color12: #5454FF
+! pur.le
+URxvt.color5:  #B218B2
+URxvt.color13: #FF54FF
+! cya.
+URxvt.color6:  #18B2B2
+URxvt.color14: #54FFFF
+! whi.e
+URxvt.color7:  #B2B2B2
+URxvt.color15: #FFFFFF
 
 URxvt*iso14755:                false 
 URxvt*iso14755_52:             false 
