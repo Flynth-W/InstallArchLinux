@@ -1,0 +1,14 @@
+== Arch linux
+
+=== Installation Distro guide
+
+image::./screenchot/arch.jpg[Sunset]
+link:./InstallDistro/README.adoc[guide]
+
+=== Install Desktop 
+
+image::./screenchot/slim.png[Sunset]
+image::./screenchot/desktop.png[Sunset]
+image::./screenchot/desktop2.png[Sunset]
+
+link:./InstallDesktop/README.adoc[guide]
