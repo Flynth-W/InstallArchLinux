@@ -1,1 +1,76 @@
 == Desktop Installation for Arch Linux
+
+
+    a minimalis and efficient desktop for development
+
+//images
+
+    The installation has 2 parts, one for the system and the other for the user
+    
+    sudo is needed
+
+== system:
+execute ../InstallDistro/Install.sh
+    
+    $ ./Install.sh
+    
+    3 options will be displayed , choose 1
+    1)System
+    2)User
+    3)All
+    
+    : 1
+   
+==== this installs
+
+    xorg        -> X11R7 server
+    xorg-xinit  -> Initialize an X session  
+    slim        -> Simple LogIn Manager
+    alsa-utils  -> audio
+    pulseaudio-alsa -> audio
+
+== user
+
+execute ../InstallDistro/Install.sh
+    
+    $ ./Install.sh
+    
+    3 options will be displayed , choose 2
+    1)System
+    2)User
+    3)All
+    
+    : 2
+
+==== this installs
+
+
+    fish            -> the friendly interactive shell
+    lxappearance    -> GTK+ theme switcher
+    picom           -> a compositor for X11 (trasnparence)
+    bspwm           -> Binary space partitioning windown manager
+    sxhkd           -> Simple X hotkey deamon
+    nitrogen        -> X11 background previewer
+    polybar         -> A fast and eassy-to-use tool status bar
+    rofi            -> A window switcher, application launcher 
+    rxvt-unicode    -> emulator console
+    rxvt-unicode-terminfo   -> emulator console
+    papirus-icon-theme      -> icons
+    xclip                   -> (clipboard)
+    npm                     -> javascript package manager
+    
+    zathura                 -> view files (PDF)
+    zathura-pdf-mupdf":     -> plug to pdf
+    pcmanfm                 -> file manager
+    lsd                     -> ls remplace and more
+    bat                     -> cat remplace and more
+    neovim                  -> edit text
+    yt-dlp                  -> A youtube-dl fork with additional features and patches
+    scrot                   -> screen capture utility
+    neofetch                ->  A fast, highly customizable system info script
+    
+    qutebrowser             -> browser 
+    moc                     -> music on console
+    translate-shell         -> Command-line translator using Google Translate
+    feh                     -> view images
+    htop                    -> interactive process viewer
