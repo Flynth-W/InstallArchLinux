@@ -26,6 +26,7 @@
   "qutebrowser":" navegador web",
 	"moc":"musica en consola",
 	"translate-shell":"traductor con api de google",
-	"feh":"visor de imagenes"
+	"feh":"visor de imagenes",
+	"htop":"interactive process viewer"
 }
 
