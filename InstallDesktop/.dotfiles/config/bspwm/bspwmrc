@@ -95,6 +95,7 @@
 				bspc rule -a qutebrowser 	state=tiled
 				bspc rule -a Pcmanfm 	state=floating 
 				bspc rule -a ProWin 	state=floating 
+				bspc rule -a Asteroid 	state=floating 
 				bspc rule -a GLFW-Application	state=floating 
 
                 bspc config pointer_modifier mod4
