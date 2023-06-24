@@ -12,7 +12,7 @@ function main
       rm -rf ${args[@]}
       ;;
     *)
-      mv $* $path
+      mv -b $* $path
       ;;
   esac
 }
