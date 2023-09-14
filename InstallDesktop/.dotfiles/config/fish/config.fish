@@ -20,7 +20,7 @@
 #				[ carga colorews de los archivos y directorios ]
 					eval (dircolors -c  $HOME/.dircolors  )  
 #				[ colores para la terminal /ssh ]
-					export TERM=xterm-256color 
+					export TERM="xterm-256color"
 
 #		╔═══════════════════════════════════════════════╗
 #		║								Ruta de los Scripts  			  	  ║

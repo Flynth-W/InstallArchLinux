@@ -60,11 +60,11 @@ c.colors.statusbar.insert.bg = '#000010'
 c.colors.statusbar.passthrough.bg = '#ff0000'
 c.colors.statusbar.command.bg = '#03071e'
 c.colors.statusbar.url.warn.fg = '#00ffff'
-c.colors.tabs.bar.bg = '#001020'
-c.colors.tabs.odd.bg = '#001020'
+c.colors.tabs.bar.bg =  '#001020'
+c.colors.tabs.odd.bg =  '#001020'
 c.colors.tabs.even.bg = '#001020'
-c.colors.tabs.selected.odd.bg = '#003355'
-c.colors.tabs.selected.even.bg = '#00475e'
+c.colors.tabs.selected.odd.bg =  '#aa007766'
+c.colors.tabs.selected.even.bg = '#aa007766'
 c.colors.tabs.pinned.odd.bg = '#00ff00' #?
 c.colors.tabs.pinned.even.bg = '#ff0000'#?
 c.colors.tabs.pinned.selected.odd.bg = '#0000ff'
@@ -90,28 +90,11 @@ config.bind("<alt+q>", "quit --save")
 
 
 config.bind( 'xb','config-cycle tabs.show always never')
-#config.bind( 'xtr','set-cmd-text :open   spawn --userscript translate' )
 config.bind( 'xtr','spawn --userscript translate' )
-#onfig.bind( "<ctrl+shift+y>",'open -t https://www.youtube.com/')
-#config.bind( "<ctrl+y>",'open https://www.youtube.com/')
 
 
 
 
-#config.bind( 'xb','config-cycle tabs.show always never')
-#config.bind( 'xb','config-cycle tabs.show always never')
-#config.bind( 'xb','config-cycle tabs.show always never')
-#config.bind( 'xb','config-cycle tabs.show always never')
-
-
-#aun no funciona con los videos
-#darck mode
-
-
-#config.set("colors.webpage.darkmode.grayscale.all",True)
-#config.set("colors.webpage.darkmode.grayscale.images",0.9)
-#config.set('colors.webpage.darkmode.threshold.background',0)
-#config.set("colors.webpage.preferred_color_scheme",'dark')
 
 
 

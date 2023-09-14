@@ -7,6 +7,7 @@
 !          Xcursor.theme: KanadaCursors
 !					URxvt.saveLines:10000
 					URxvt.internalBorder:  0
+                    URxvt.termName: rxvt-256color
 !		╔═══════════════════════════════════════════════╗	
 !		║  			ESPACIO ENTRE LAS LETRAS							  ║	
 !		╚═══════════════════════════════════════════════╝
@@ -56,26 +57,26 @@ URxvt.cursorColor:#0077aa
 URxvt.color0:#000000
 URxvt.color8:#333333
 ! red
-URxvt.color1:[50]#aa00ff
+URxvt.color1:#ff1122
 URxvt.color9:#ff2344
 ! green
 URxvt.color2:#00ff00
 URxvt.color10:#00ff44
 ! yellow
 URxvt.color3:#ffff00
-URxvt.color11:#ff00ff
+URxvt.color11:#ffff22
 ! blue
-URxvt.color4  :[90]#000005
-URxvt.color12 :#4444ff
+URxvt.color4  :#00aaff
+URxvt.color12 :#00ccff
 ! magenta
-URxvt.color5  :[10]#af0343
-URxvt.color13 :#af00ff
+URxvt.color5  :#df0343
+URxvt.color13 :#df00ff
 ! cyan
-URxvt.color6  : #00ffff
-URxvt.color14 : #55ffff
+URxvt.color6  :#00ffff
+URxvt.color14 :#55ffff
 ! white
-URxvt.color7  :#00ffaa
-URxvt.color15 :#aaaaaa
+URxvt.color7  :#ffddff
+URxvt.color15 :#ddffdd
 
 
 URxvt*iso14755:                false 
